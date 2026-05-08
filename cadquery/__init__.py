@@ -15,6 +15,10 @@ Example usage::
         .workplane()
         .hole(3)
     )
+
+Personal fork notes:
+- Added `cq` alias to __all__ so it shows up in tab-completion and help().
+- Keeping track of upstream version for easy diffing.
 """
 
 from .cq import (
@@ -67,7 +71,7 @@ __version__ = "2.4.0"
 __author__ = "CadQuery Contributors"
 __license__ = "Apache License 2.0"
 
-# Convenience alias
+# Convenience alias - also exposed in __all__ so it appears in tab-completion
 cq = Workplane
 
 __all__ = [
@@ -75,6 +79,8 @@ __all__ = [
     "Workplane",
     "CQContext",
     "CQObject",
+    # Convenience alias
+    "cq",
     # Geometry
     "Vector",
     "Matrix",
